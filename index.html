@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="css/angular-datepicker.css" rel="stylesheet" />
+    <title></title>
+    <script src="library/angular.min.js"></script>
+    <script src="library/angular-datepicker.js"></script>
+    <script src="app/app.js"></script>
+</head>
+<body ng-app="app">
+    <div ng-controller="DatepickerDemoCtrl" style="width:50%">
+        <h2>Pick a date</h2>
+        {{ today }}
+        {{ minDate }}
+        <datepicker  date-min-limit="{{ minDate }}">
+            <input ng-model="date" type="text" />
+        </datepicker>
+        <datepicker date-min-limit="{{ today }}">
+            <input ng-model="date" type="text" />
+        </datepicker>
+    </div>
+</body>
+</html>
